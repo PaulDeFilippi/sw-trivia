@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		4F459D6921A2372600CB424D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F459D6821A2372600CB424D /* AppDelegate.swift */; };
-		4F459D6B21A2372600CB424D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F459D6A21A2372600CB424D /* ViewController.swift */; };
+		4F459D6B21A2372600CB424D /* SelectPersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F459D6A21A2372600CB424D /* SelectPersonViewController.swift */; };
 		4F459D6E21A2372600CB424D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F459D6C21A2372600CB424D /* Main.storyboard */; };
 		4F459D7021A2372900CB424D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F459D6F21A2372900CB424D /* Assets.xcassets */; };
 		4F459D7321A2372900CB424D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F459D7121A2372900CB424D /* LaunchScreen.storyboard */; };
+		4F459D7D21A240A600CB424D /* Starjout.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F459D7A21A240A600CB424D /* Starjout.ttf */; };
+		4F459D7E21A240A600CB424D /* Starjhol.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F459D7B21A240A600CB424D /* Starjhol.ttf */; };
+		4F459D7F21A240A600CB424D /* Starjedi.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F459D7C21A240A600CB424D /* Starjedi.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4F459D6521A2372600CB424D /* starWarsTrivia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = starWarsTrivia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F459D6821A2372600CB424D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4F459D6A21A2372600CB424D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4F459D6A21A2372600CB424D /* SelectPersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPersonViewController.swift; sourceTree = "<group>"; };
 		4F459D6D21A2372600CB424D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4F459D6F21A2372900CB424D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F459D7221A2372900CB424D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4F459D7421A2372900CB424D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F459D7A21A240A600CB424D /* Starjout.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Starjout.ttf; sourceTree = "<group>"; };
+		4F459D7B21A240A600CB424D /* Starjhol.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Starjhol.ttf; sourceTree = "<group>"; };
+		4F459D7C21A240A600CB424D /* Starjedi.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Starjedi.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +60,57 @@
 		4F459D6721A2372600CB424D /* starWarsTrivia */ = {
 			isa = PBXGroup;
 			children = (
+				4F459D8421A2411B00CB424D /* Model */,
+				4F459D8321A2411200CB424D /* View */,
+				4F459D8221A2410700CB424D /* Controller */,
 				4F459D6821A2372600CB424D /* AppDelegate.swift */,
-				4F459D6A21A2372600CB424D /* ViewController.swift */,
+				4F459D6A21A2372600CB424D /* SelectPersonViewController.swift */,
+				4F459D8121A240C900CB424D /* Resources */,
 				4F459D6C21A2372600CB424D /* Main.storyboard */,
 				4F459D6F21A2372900CB424D /* Assets.xcassets */,
 				4F459D7121A2372900CB424D /* LaunchScreen.storyboard */,
 				4F459D7421A2372900CB424D /* Info.plist */,
 			);
 			path = starWarsTrivia;
+			sourceTree = "<group>";
+		};
+		4F459D8021A240B700CB424D /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				4F459D7C21A240A600CB424D /* Starjedi.ttf */,
+				4F459D7B21A240A600CB424D /* Starjhol.ttf */,
+				4F459D7A21A240A600CB424D /* Starjout.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		4F459D8121A240C900CB424D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4F459D8021A240B700CB424D /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		4F459D8221A2410700CB424D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4F459D8321A2411200CB424D /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4F459D8421A2411B00CB424D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,8 +171,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F459D7D21A240A600CB424D /* Starjout.ttf in Resources */,
 				4F459D7321A2372900CB424D /* LaunchScreen.storyboard in Resources */,
 				4F459D7021A2372900CB424D /* Assets.xcassets in Resources */,
+				4F459D7E21A240A600CB424D /* Starjhol.ttf in Resources */,
+				4F459D7F21A240A600CB424D /* Starjedi.ttf in Resources */,
 				4F459D6E21A2372600CB424D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,7 +187,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F459D6B21A2372600CB424D /* ViewController.swift in Sources */,
+				4F459D6B21A2372600CB424D /* SelectPersonViewController.swift in Sources */,
 				4F459D6921A2372600CB424D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
