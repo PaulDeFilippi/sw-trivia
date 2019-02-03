@@ -10,11 +10,14 @@ import UIKit
 
 class SelectPersonViewController: UIViewController {
     
+    var personApi = PersonApi()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // now handled in subclass
-        //stackBg.layer.cornerRadius = 10
+        personApi.getRandomPersonUrlSession()
+        
+
     }
 
 

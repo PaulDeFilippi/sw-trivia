@@ -15,6 +15,7 @@
 		4F459D7D21A240A600CB424D /* Starjout.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F459D7A21A240A600CB424D /* Starjout.ttf */; };
 		4F459D7E21A240A600CB424D /* Starjhol.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F459D7B21A240A600CB424D /* Starjhol.ttf */; };
 		4F459D7F21A240A600CB424D /* Starjedi.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F459D7C21A240A600CB424D /* Starjedi.ttf */; };
+		4F76E2222207A5EC00206ACE /* PersonAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F76E2212207A5EC00206ACE /* PersonAPI.swift */; };
 		4F85F2BA21F3E5E300EB8732 /* BlackBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F85F2B921F3E5E300EB8732 /* BlackBackgroundView.swift */; };
 		4F85F2BD21F3E72000EB8732 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F85F2BC21F3E72000EB8732 /* Constants.swift */; };
 /* End PBXBuildFile section */
@@ -30,6 +31,7 @@
 		4F459D7A21A240A600CB424D /* Starjout.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Starjout.ttf; sourceTree = "<group>"; };
 		4F459D7B21A240A600CB424D /* Starjhol.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Starjhol.ttf; sourceTree = "<group>"; };
 		4F459D7C21A240A600CB424D /* Starjedi.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Starjedi.ttf; sourceTree = "<group>"; };
+		4F76E2212207A5EC00206ACE /* PersonAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonAPI.swift; sourceTree = "<group>"; };
 		4F85F2B921F3E5E300EB8732 /* BlackBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackBackgroundView.swift; sourceTree = "<group>"; };
 		4F85F2BC21F3E72000EB8732 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -69,6 +71,7 @@
 				4F459D8221A2410700CB424D /* Controller */,
 				4F459D6821A2372600CB424D /* AppDelegate.swift */,
 				4F459D6A21A2372600CB424D /* SelectPersonViewController.swift */,
+				4F76E2202207A5C700206ACE /* Services */,
 				4F85F2BB21F3E70000EB8732 /* Utils */,
 				4F459D8121A240C900CB424D /* Resources */,
 				4F459D6C21A2372600CB424D /* Main.storyboard */,
@@ -117,6 +120,14 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		4F76E2202207A5C700206ACE /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4F76E2212207A5EC00206ACE /* PersonAPI.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		4F85F2BB21F3E70000EB8732 /* Utils */ = {
@@ -204,6 +215,7 @@
 				4F459D6B21A2372600CB424D /* SelectPersonViewController.swift in Sources */,
 				4F85F2BA21F3E5E300EB8732 /* BlackBackgroundView.swift in Sources */,
 				4F459D6921A2372600CB424D /* AppDelegate.swift in Sources */,
+				4F76E2222207A5EC00206ACE /* PersonAPI.swift in Sources */,
 				4F85F2BD21F3E72000EB8732 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
