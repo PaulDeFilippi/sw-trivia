@@ -8,7 +8,7 @@
 
 import Foundation
 
-// 13 create struct from json respone - can look at call in Postman to determine
+// 12 create struct from json respone - can look at call in Postman to determine
 // what parameters you need - the call ws set up in the PersonAPI.swift file from the url passed into the getRandomPersonUrlSession() func
 
 struct Person {
