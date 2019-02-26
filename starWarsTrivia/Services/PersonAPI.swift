@@ -11,17 +11,22 @@ import Foundation
 class PersonApi {
     
     // 21 - this func was func getRandomPersonUrlSession() { but now becomes the following func after we prepare for completion handler - we also add @escaping so the function can return then the completion is executed
-    func getRandomPersonUrlSession(completion: @escaping PersonResponseCompletion) {
-        // 2
-        guard let url = URL(string: PERSON_URL) else { return }
+    // 26 - we add the id: parameter so that that id is the random number generated
+    func getRandomPersonUrlSession(id: Int, completion: @escaping PersonResponseCompletion) {
+        // 2 looks like guard let url = URL(string: PERSON_URL) else { return }
+        // 27 - step two becomes guard let url = URL(string: "\(PERSON_URL)\(id)") else { return } - all we did was add string interpolation
+        guard let url = URL(string: "\(PERSON_URL)\(id)") else { return }
         // 1
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
             // 6
             guard error == nil else {
                 debugPrint(error.debugDescription)
-                // 23 1/2 - we made the prson in the completion handler an optional so now we can return nil if there is an error
+                // 23 1/2 - we made the person in the completion handler an optional so now we can return nil if there is an error
+                
                 completion(nil)
                 return
+                
+                
             }
             // 7
             guard let data = data else { return }
@@ -37,7 +42,12 @@ class PersonApi {
                 // 17 - the commented line above now becomes let person = self.parsePersonManual(json: json) so that we can store the data we get back from calling parsePersonManually() in the person variable
                 let person = self.parsePersonManual(json: json)
                 // 22 - this is where we call our newly created completion - right after we get our person instance from calling parsePersonManually above - go to step 23 to see how the completion is actually executed
-                completion(person)
+                // 30 - resolving error thrown in step 29 b. we have to take the commented line below and move the completion back to the main thread.
+                //completion(person)
+                // we need to wrap the completion in DispatchQue.main.async as follows
+                DispatchQueue.main.async {
+                    completion(person)
+                }
                 
                 // 18 - now we can use the instance of person
                 print(person.name)

@@ -29,10 +29,33 @@ class SelectPersonViewController: UIViewController {
         //personApi.getRandomPersonUrlSession()
         // 23 - step 5 above becomes what we have below - we incorporate the completion handler into the mix that we created in the getRandomPersonUrlSession() function
         // we created the completion handler with an optional Person object so we can handle any errors if the api call fails
-        personApi.getRandomPersonUrlSession { (person) in
+        // 28 - commented out below and moved to randomCLicked() method so we can pass in the random number of persons
+//        personApi.getRandomPersonUrlSession { (person) in
+//            // need to unwrap person that was setup as an optional in the completion handler
+//            if let person = person {
+//                print("Person = \(person.name)")
+//
+//            }
+//        }
+    }
+    
+    // 24 - create action for randomizer button
+    @IBAction func randomClicked(_ sender: Any) {
+        let random = Int.random(in: 1 ... 87)
+        // 28 continued - plus added id parameter to function
+        personApi.getRandomPersonUrlSession(id: random) { (person) in
             // need to unwrap person that was setup as an optional in the completion handler
             if let person = person {
-                print(person.name)
+                //print("Person = \(person.name)")
+                // 29 - a. set labels - use self when inside a closure
+                self.nameLbl.text = person.name
+                self.heightLbl.text = person.height
+                self.massLbl.text = person.mass
+                self.hairLbl.text = person.hair
+                self.birthYearLbl.text = person.birthYear
+                self.genderLbl.text = person.gender
+                // 29 - b. this message was thrown when we ran app after setting labels
+                // UILabel.text must be used from main thread only - go to step 30 to see how we resolved it
                 
             }
         }

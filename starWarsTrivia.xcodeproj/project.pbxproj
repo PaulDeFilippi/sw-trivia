@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3CCCAEF2CD4997AA6853E6EA /* Pods_starWarsTrivia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03A6803C91928A4EAC016493 /* Pods_starWarsTrivia.framework */; };
 		4F459D6921A2372600CB424D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F459D6821A2372600CB424D /* AppDelegate.swift */; };
 		4F459D6B21A2372600CB424D /* SelectPersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F459D6A21A2372600CB424D /* SelectPersonViewController.swift */; };
 		4F459D6E21A2372600CB424D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F459D6C21A2372600CB424D /* Main.storyboard */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		03A6803C91928A4EAC016493 /* Pods_starWarsTrivia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_starWarsTrivia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F459D6521A2372600CB424D /* starWarsTrivia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = starWarsTrivia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F459D6821A2372600CB424D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4F459D6A21A2372600CB424D /* SelectPersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPersonViewController.swift; sourceTree = "<group>"; };
@@ -36,6 +38,8 @@
 		4F85F2B921F3E5E300EB8732 /* BlackBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackBackgroundView.swift; sourceTree = "<group>"; };
 		4F85F2BC21F3E72000EB8732 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4FA26DFF221CDAA2007C230A /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		A97FC3C7C091D6C8313A35FD /* Pods-starWarsTrivia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-starWarsTrivia.debug.xcconfig"; path = "Target Support Files/Pods-starWarsTrivia/Pods-starWarsTrivia.debug.xcconfig"; sourceTree = "<group>"; };
+		E8FF77BA49B5A1946B766064 /* Pods-starWarsTrivia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-starWarsTrivia.release.xcconfig"; path = "Target Support Files/Pods-starWarsTrivia/Pods-starWarsTrivia.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CCCAEF2CD4997AA6853E6EA /* Pods_starWarsTrivia.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +59,8 @@
 			children = (
 				4F459D6721A2372600CB424D /* starWarsTrivia */,
 				4F459D6621A2372600CB424D /* Products */,
+				9E32B942AED104F692302D9D /* Pods */,
+				7D1581A0F41376BBF5925DE5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -141,6 +148,24 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		7D1581A0F41376BBF5925DE5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				03A6803C91928A4EAC016493 /* Pods_starWarsTrivia.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9E32B942AED104F692302D9D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A97FC3C7C091D6C8313A35FD /* Pods-starWarsTrivia.debug.xcconfig */,
+				E8FF77BA49B5A1946B766064 /* Pods-starWarsTrivia.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -148,9 +173,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4F459D7721A2372900CB424D /* Build configuration list for PBXNativeTarget "starWarsTrivia" */;
 			buildPhases = (
+				96922068269C85A1B0DF6657 /* [CP] Check Pods Manifest.lock */,
 				4F459D6121A2372600CB424D /* Sources */,
 				4F459D6221A2372600CB424D /* Frameworks */,
 				4F459D6321A2372600CB424D /* Resources */,
+				2D71657FD0BDD733EDB1F4D5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -209,6 +236,55 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2D71657FD0BDD733EDB1F4D5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-starWarsTrivia/Pods-starWarsTrivia-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-starWarsTrivia/Pods-starWarsTrivia-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		96922068269C85A1B0DF6657 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-starWarsTrivia-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4F459D6121A2372600CB424D /* Sources */ = {
@@ -364,6 +440,7 @@
 		};
 		4F459D7821A2372900CB424D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A97FC3C7C091D6C8313A35FD /* Pods-starWarsTrivia.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -382,6 +459,7 @@
 		};
 		4F459D7921A2372900CB424D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8FF77BA49B5A1946B766064 /* Pods-starWarsTrivia.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
